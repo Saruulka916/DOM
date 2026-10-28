@@ -5,67 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Loading · Forma</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="index.js" defer></script>
   </head>
-
-  <body
-    class="bg-[#190B10] flex items-center justify-center flex-col h-screen text-[#C4A2AB]"
-  >
-    <div
-      class="font-medium text-[#C4A2AB] flex justify-between items-center pb-[24px] flex-col tracking-[3px] text-[10px]"
-    >
-      — LET’S GET YOU STARTED —
-    </div>
-    <div
-      class="w-[720px] h-[456px] bg-[#260F17] overflow-hidden rounded-3xl  border border-[#46232E] flex flex-col"
-    >
-      <div class="px-12 pt-10">
-        <div class="w-624px h-[28px] flex justify-between pb-[36px]">
-          <div
-            class="font-medium text-[#FF9299] flex content-between tracking-[1.5px] text-[10px]"
+  <body class="min-h-screen min-w-[1000px] bg-[#190b10] font-sans text-[#fff5ee]">
+    <div class="mx-auto flex min-h-screen w-[920px] flex-col">
+      <header class="flex h-24 shrink-0 items-center justify-between border-b border-[#ff9299]/10">
+        <nav>
+          <a
+            href="../index.html"
+            class="inline-flex items-center gap-2 rounded-full border border-[#ff9299]/15 bg-white/5 px-4 py-2.5 text-xs font-medium text-[#ff9299] transition-colors hover:border-[#ff9299]/35 hover:bg-[#ff9299]/10 hover:text-[#fff5ee] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ff9299] motion-reduce:transition-none"
           >
-            GETTING READY
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5m7-7-7 7 7 7" />
+            </svg>
+            Back to projects
+          </a>
+        </nav>
+        <span class="text-[10px] font-medium uppercase tracking-[2.5px] text-[#ff9299]/65">The everyday collection / 01</span>
+      </header>
+
+      <div class="flex flex-1 items-center justify-center py-10">
+        <div class="bg-[#190B10] flex items-center justify-center flex-col h-[800px] text-[#C4A2AB]">
+          <div class="font-medium text-[#C4A2AB] flex justify-between items-center pb-[24px] flex-col tracking-[3px] text-[10px]">— LET’S GET YOU STARTED —</div>
+          <div class="w-[720px] h-[456px] bg-[#260F17] overflow-hidden rounded-3xl border border-[#46232E] flex flex-col">
+            <div class="px-12 pt-10">
+              <div class="w-624px h-[28px] flex justify-between pb-[36px]">
+                <div class="font-medium text-[#FF9299] flex content-between tracking-[1.5px] text-[10px]">GETTING READY</div>
+                <div class="font-normal text-[#C4A2AB] text-[10px]">01 — 03</div>
+              </div>
+              <div class="font-semibold text-[#FFF5EE] text-[40px]">Something good is coming.</div>
+              <div class="font-normal text-#C4A2AB pt-[12px] text-[15px] tracking-[0]">A little preparation for a great beginning.</div>
+              <div class="flex justify-between items-center">
+                <div class="flex">
+                  <div id="counter" class="min-w-[138px] font-medium text-[#FFF5EE] text-[112px]">64</div>
+                  <span class="text-[#FF6470] text-[38px] font-light pt-[80px]">%</span>
+                </div>
+                <div id="message" class="font-normal text-#C4A2AB text-sm">Bringing everything together</div>
+              </div>
+              <div class="w-[624px] h-[12px] rounded-[6px] border-transparent bg-[#46232E]">
+                <div id="loading-bar" class="w-0 h-full bg-[#EF3340] border-[#EF3340] rounded-[6px]"></div>
+              </div>
+              <div class="font-normal text-#C4A2AB flex justify-between pt-[12px] pb-[12px]">
+                <div class="tracking-[1px] font-normal text-[10px]">PREPARING YOUR EXPERIENCE</div>
+                <div class="tracking-[1px] font-normal text-[10px]">JUST A MOMENT</div>
+              </div>
+            </div>
+            <div class="bg-[#1E0C13] flex justify-center items-center p-[20.5px] pt-[20.5px]">
+              <div class="font-normal text-[#C4A2AB] text-xs pb-[20.5px]">→ Your welcome page will open automatically.</div>
+            </div>
           </div>
-          <div class="font-normal text-[#C4A2AB] text-[10px]">01 — 03</div>
-        </div>
-        <div class="font-semibold text-[#FFF5EE] text-[40px]">
-          Something good is coming.
-        </div>
-        <div
-          class="font-normal text-#C4A2AB pt-[12px] text-[15px] tracking-[0]"
-        >
-          A little preparation for a great beginning.
-        </div>
-        <div class="flex justify-between items-center">
-          <div class="font-medium text-[#FFF5EE] text-[112px]">
-            64<span class="text-[#FF6470] text-[38px] font-light"> %</span>
-          </div>
-          <div class="font-normal text-#C4A2AB text-sm">
-            Bringing everything together
-          </div>
-        </div>
-        <div
-          class="w-[624px] h-[12px] rounded-[6px] border-transparent bg-[#46232E]"
-        >
-          <div
-            class="w-[399.36px] h-[12px] bg-[#EF3340] border-[#EF3340] rounded-[6px]"
-          ></div>
-        </div>
-        <div
-          class="font-normal text-#C4A2AB flex justify-between pt-[12px] pb-[12px]"
-        >
-          <div class="tracking-[1px] font-normal text-[10px]">
-            PREPARING YOUR EXPERIENCE
-          </div>
-          <div class="tracking-[1px] font-normal text-[10px]">
-            JUST A MOMENT
-          </div>
-        </div>
-      </div>
-      <div class="bg-[#1E0C13] flex justify-center items-center p-[20.5px] pt-[20.5px]">
-        <div
-          class="font-normal text-[#C4A2AB] text-xs pb-[20.5px]"
-        >
-          → Your welcome page will open automatically.
         </div>
       </div>
     </div>

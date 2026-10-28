@@ -5,9 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stopwatch</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="index.js" defer></script>
   </head>
 
-  <body>
-    Stopwatch
+  <body class="min-h-screen min-w-[1000px] bg-[#101714] font-sans text-[#f0fdf4]">
+    <div class="mx-auto flex min-h-screen w-[920px] flex-col">
+      <header class="flex h-24 shrink-0 items-center justify-between border-b border-[#c5d9bd]/10">
+        <nav>
+          <a
+            href="../index.html"
+            class="inline-flex items-center gap-2 rounded-full border border-[#c5d9bd]/15 bg-white/5 px-4 py-2.5 text-xs font-medium text-[#c5d9bd] transition-colors hover:border-[#c5d9bd]/35 hover:bg-[#c5d9bd]/10 hover:text-[#f0fdf4] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c5d9bd] motion-reduce:transition-none"
+          >
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5m7-7-7 7 7 7" />
+            </svg>
+            Back to projects
+          </a>
+        </nav>
+        <span class="text-[10px] font-medium uppercase tracking-[2.5px] text-[#c5d9bd]/65">The everyday collection / 04</span>
+      </header>
+
+      <div class="flex flex-1 items-center justify-center py-10">
+        <div class="bg-[#101714] flex items-center justify-center flex-col h-screen">
+          <div class="w-[620px] h-[551px] border border-[#19231E8C] bg-[#19231E8C] rounded-[28px] p-[40px]">
+            <div class="flex justify-between items-center">
+              <div class="border border-[#B5CBB21A] bg-[#B5CBB21A] rounded-xl w-[44px] h-[44px] p-[10.5px] text-[#C5D9BD]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-timer preview-icon"
+                >
+                  <line x1="10" x2="14" y1="2" y2="2" />
+                  <line x1="12" x2="15" y1="14" y2="11" />
+                  <circle cx="12" cy="14" r="8" />
+                </svg>
+              </div>
+              <div class="border border-[#C5D9BD26] bg-[#B5CBB20D] rounded-[99px] w-[62px] h-[29px] py-[6px] px-[12px] text-[#C5D9BD] text-xs font-medium">Ready</div>
+            </div>
+            <hr class=""/>
+            <div class="font-normal text-[40px] text-[#F0FDF4] tracking-[-1px] pt-[28px]">Stopwatch</div>
+            <div class="font-normal text-sm text-[#A4B9AD] pb-[8px]">Make time for what matters.</div>
+            <div class="flex">
+              <div></div>
+            </div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
