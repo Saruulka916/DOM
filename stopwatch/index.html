@@ -49,14 +49,47 @@
               </div>
               <div class="border border-[#C5D9BD26] bg-[#B5CBB20D] rounded-[99px] w-[62px] h-[29px] py-[6px] px-[12px] text-[#C5D9BD] text-xs font-medium">Ready</div>
             </div>
-            <hr class=""/>
             <div class="font-normal text-[40px] text-[#F0FDF4] tracking-[-1px] pt-[28px]">Stopwatch</div>
-            <div class="font-normal text-sm text-[#A4B9AD] pb-[8px]">Make time for what matters.</div>
-            <div class="flex">
-              <div></div>
+            <div class="font-normal text-sm text-[#A4B9AD] pb-[36px]">Make time for what matters.</div>
+            <hr class="border border-[#B5CBB226]" />
+            <div class="py-[36px]">
+              <div class="flex gap-[50px] items-center justify-center justify-between">
+                <div class="flex flex-col items-center">
+                  <div class="font-light text-[56px] text-[#EDF3E8]">00</div>
+                  <div class="font-medium text-[#9BAD9E] text-[9px] tracking-[2px]">HOURS</div>
+                </div>
+
+                <span class="font-normal text-[#5C7161] text-[40px]">:</span>
+
+                <div class="flex flex-col items-center">
+                  <div class="font-light text-[56px] text-[#EDF3E8]">00</div>
+                  <div class="font-medium text-[#9BAD9E] text-[9px] tracking-[2px]">MINUTES</div>
+                </div>
+
+                <span class="font-normal text-[#5C7161] text-[40px]">:</span>
+
+                <div class="flex flex-col items-center">
+                  <div class="font-light text-[56px] text-[#C5D9BD]">00</div>
+                  <div class="font-medium text-[#9BAD9E] text-[9px] tracking-[2px]">SECONDS</div>
+                </div>
+              </div>
             </div>
-            <div></div>
-            <div></div>
+            <hr class="border border-[#B5CBB226]" />
+            <div class="flex items-center gap-[12px] pt-[32px] pb-[20px]">
+              <button class="cursor-pointer border border-[#B5CBB2] rounded-xl bg-[#B5CBB2] w-[258px] h-[48px] text-[#102418] font-semibold text-sm py-[15.5px] px-[112px]">Start</button>
+              <button
+                disabled
+                class="disabled:cursor-not-allowed border border-[#FFFFFF1A] bg-[#FFFFFF0D] w-[129px] h-[48px] rounded-xl opacity-[35] font-medium text-sm text-[#DCECE2] py-[14.5px] px-[43px]"
+              >
+                Pause
+              </button>
+              <button disabled class="disabled:cursor-not-allowed border border-[#FFFFFF1A] w-[129px] h-[48px] rounded-xl opacity-[35] font-medium text-sm py-[14.5px] px-[43px] text-[#A4B9AD]">
+                Reset
+              </button>
+            </div>
+            <div class="flex justify-center items-center">
+              <div class="text-xs font-normal text-[#8AA294]">A moment of focus. At your own pace.</div>
+            </div>
           </div>
         </div>
       </div>
