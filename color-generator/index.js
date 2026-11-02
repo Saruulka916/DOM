@@ -43,3 +43,4 @@ const hslToHex = (hue, saturation, light) => {
 
   return `#${channel(0)}${channel(8)}${channel(4)}`.toUpperCase();
 };
+
