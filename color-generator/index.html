@@ -29,7 +29,10 @@
             <div class="font-semibold text-[#F4F4F5] text-3xl pb-[12px]">Color palettes.</div>
             <div class="font-normal text-[#A1A1AA] text-sm pb-[39px]">Generated shades with Tailwind color names. Click a shade to copy its HEX background color.</div>
           </div>
-          <div class="border border-[#D9F99D] bg-[#D9F99D] flex justify-center items-center gap-[8px] w-[186px] h-[48px] rounded-xl text-[#09090B]">
+          <div
+            id="Shuffle-button"
+            class="border border-[#D9F99D] bg-[#D9F99D] flex justify-center items-center gap-[8px] w-[186px] h-[48px] rounded-xl text-[#09090B] transition hover:bg-lime-100 active:scale-[0.98]"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -47,27 +50,16 @@
               <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" />
               <path d="M8 16H3v5" />
             </svg>
-            <button id="" class="cursor-pointer font-semibold text-[#09090B] text-sm">Shuffle palettes</button>
+            <button class="cursor-pointer font-semibold text-[#09090B] text-sm">Shuffle palettes</button>
           </div>
         </div>
         <hr class="border border-[#27272A]" />
         <div class="flex justify-between pb-[20px] pt-[20px]">
           <div class="text-[#A1A1AA] text-xs font-medium">100 → 950 · LIGHT TO DARK</div>
-          <div class="font-normal text-xs text-[#A1A1AA]">Ready to explore.</div>
+          <div id="status" class="font-normal text-xs text-[#A1A1AA]">Ready to explore.</div>
         </div>
 
-        <div class="space-y-7">
-          <div class="">
-            <h5 class="pb-[12px]">Red</h5>
-            <div class="flex gap-x-3">
-              <button class="flex flex-col items-center">
-                <span class="w-[113.2px] bg-red-500 h-[64px] border border-red-500 rounded-lg"></span>
-                <span class="py-[8px] font-medium text-[#D4D4D8] text-xs">100</span>
-                <span class="font-normal text-[9px] text-[#A1A1AA]">#35467</span>
-              </button>
-            </div>
-          </div>
-        </div>
+        <div id="colors" class="space-y-7"></div>
       </div>
     </div>
   </body>

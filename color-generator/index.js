@@ -1,3 +1,7 @@
+const status = document.getElementById("status");
+const ShuffleButton = document.getElementById("Shuffle-button");
+const colors = document.getElementById("colors");
+
 const lightness = [94, 86, 76, 64, 52, 43, 35, 27, 20, 12];
 const shades = [100, 200, 300, 400, 500, 600, 700, 800, 900, 950];
 
@@ -26,10 +30,10 @@ const families = [
   { name: "fuchsia", hue: 292, saturation: 82 },
 ];
 
-let selectedFamilies = ["red", "amber", "emerald", "sky", "violet", "pink"]
+let selectedFamilies = ["red", "amber", "emerald", "sky", "violet", "pink"].map((name) => families.find((family) => name === family.name));
 
-const hslToHex = (hue, saturation, light) => {
-  const l = light / 100;
+const hslToHex = ({ hue, saturation, lightness }) => {
+  const l = lightness / 100;
   const s = saturation / 100;
   const amplitude = s * Math.min(l, 1 - l);
 
@@ -44,3 +48,56 @@ const hslToHex = (hue, saturation, light) => {
   return `#${channel(0)}${channel(8)}${channel(4)}`.toUpperCase();
 };
 
+colors.addEventListener("click", (event) => {
+  const button = event.target.closest("button[data-hex]");
+
+  setTimeout(() => {
+    status.textContent = "Ready to explore.";
+  }, 2000);
+
+  if (!button) return;
+  const hex = button.dataset.hex;
+
+  status.textContent = `${hex} is copied`;
+  navigator.clipboard.writeText(hex);
+});
+
+const renderColors = () => {
+  colors.innerHTML = "";
+  selectedFamilies.forEach(({ name, hue, saturation }) => {
+    const colorButtons = shades
+      .map((shades, index) => {
+        const hex = hslToHex({ hue, saturation, lightness: lightness[index] });
+
+        return `<button data-hex="${hex}" class="flex flex-col items-center hover:-translate-y-2 ease transition">
+                <span style="background-color: ${hex}" class="w-[113.2px] h-[64px] rounded-lg"></span>
+                <span class="py-[8px] font-medium text-[#D4D4D8] text-xs">${shades}</span>
+                <span class="font-normal text-[9px] text-[#A1A1AA]">${hex}</span>
+              </button>`;
+      })
+      .join("");
+
+    const template = ` <div>
+            <h5 class="pb-[12px]">${name}</h5>
+            <div class="flex gap-x-3">${colorButtons}
+            </div>
+          </div>
+          `;
+
+    colors.innerHTML += template;
+  });
+};
+
+ShuffleButton.addEventListener("click", () => {
+  const remaining = [...families];
+  selectedFamilies = [];
+  for (let i = 0; i < 6; i++) {
+    const randomIndex = Math.floor(Math.random() * remaining.length);
+    selectedFamilies.push(remaining[randomIndex]);
+
+    remaining.splice(randomIndex, 1);
+  }
+  renderColors();
+});
+
+renderColors();
