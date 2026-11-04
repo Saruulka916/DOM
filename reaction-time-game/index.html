@@ -32,24 +32,23 @@
               <div class="font-semibold text-sm text-[#A1A1AA] pt-[8px] pb-[24px]">Wait for green, then click as quickly as you can.</div>
 
               <button id="grey-border" class="cursor-pointer border border-[#27272A] bg-[#27272A] rounded-2xl flex gap-[12px] w-[512px] h-[256px] flex flex-col justify-center items-center">
-                <div class="w-[48px] h-[48px] flex justify-center items-center">
+                <div id="symbol" class="w-[48px] text-xl h-[48px] flex justify-center items-center">
                   <div class="w-[36px] h-[36px] border-[2px] border-[#F4F4F5] rounded-[999px] border-solid flex justify-center items-center">
                     <div class="w-[22px] h-[22px] border-[2px] border-[#F4F4F5] rounded-[999px] flex justify-center items-center">
                       <div class="w-[6px] h-[6px] border-[2px] border-[#F4F4F5] bg-[#F4F4F5] rounded-[999px]"></div>
                     </div>
                   </div>
                 </div>
-                <div id="symbol"></div>
-                <div id="message" class="font-semibold text-2xl text-[#F4F4F5]">Ready when you are</div>
-                <div id="hint" class="font-normal text-[#F4F4F5] text-sm">Click to start</div>
+                <div id="message" class="font-semibold text-2xl">Ready when you are</div>
+                <div id="start" class="font-normal text-sm">Click to start</div>
               </button>
               <div class="flex gap-[12px] pt-[24px]">
                 <div class="border border-[#27272A] bg-[#27272A] w-[250px] h-[84px] rounded-xl flex flex-col justify-center items-center">
-                  <span id="last-ms" class="w-[24px] h-[29px] text-[#D9F99D] text-2xl flex items-center justify-center tracking-[-3px]">---</span>
+                  <span id="last" class="w-[24px] h-[29px] text-[#D9F99D] text-2xl flex items-center justify-center tracking-[-3px]">---</span>
                   <div class="font-normal text-xs text-[#A1A1AA] pt-[4px]">Last attempt</div>
                 </div>
                 <div class="border border-[#27272A] bg-[#27272A] w-[250px] h-[84px] rounded-xl flex flex-col justify-center items-center">
-                  <span id="best-ms" class="w-[24px] h-[29px] text-[#D9F99D] text-2xl flex items-center justify-center tracking-[-3px]">---</span>
+                  <span id="best" class="w-[24px] h-[29px] text-[#D9F99D] text-2xl flex items-center justify-center tracking-[-3px]">---</span>
                   <div class="font-normal text-xs text-[#A1A1AA] pt-[4px]">Best this session</div>
                 </div>
               </div>
